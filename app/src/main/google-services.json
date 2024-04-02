@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "682885002421",
+    "firebase_url": "https://autism-project-29881-default-rtdb.firebaseio.com",
+    "project_id": "autism-project-29881",
+    "storage_bucket": "autism-project-29881.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682885002421:android:5bd7294b0a0c217b40fafc",
+        "android_client_info": {
+          "package_name": "com.example.autismproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "682885002421-mh48qh3rdl3fnb2r5righke0tb2p3l1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALl0N4FZRJwifV4LMivWY5bd7b49c2uvg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "682885002421-mh48qh3rdl3fnb2r5righke0tb2p3l1t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
