@@ -7,4 +7,36 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary1">#575757</color>
+    <color name="colorPrimaryFadded">#575757</color>
+    <color name="pink">#C73264</color>
+    <color name="transperant">#702E2E2E</color>
+    <color name="colorgray">#CE2E2E2E</color>
+    <color name="colorPrimary">#0A79DF</color>
+    <color name="colorPrimaryDark">#0A79DF</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorAccent2">#C3FFFFFF</color>
+    <color name="colorText">#305F72</color>
+    <color name="colorTextHighlight">#07AA9B</color>
+    <color name="colorDark">#2C3335</color>
+    <color name="colorPrimaryblack">#2C3335</color>
+    <color name="colorPrimaryLight">#74B9FF</color>
+    <color name="colorPrimaryMid">#47A1FB</color>
+    <color name="colorPrimaryMiddark">#0FABFF</color>
+
+    <color name="card_color_1">#FFCA28</color>
+    <color name="card_color_2">#7986CB</color>
+    <color name="card_color_3">#69F0AE</color>
+    <color name="color_card_4">#FF8A65</color>
+    <color name="color_card_5">#BA68C8</color>
+    <color name="color_card_6">#42A5F5</color>
+    <color name="color_card_7">#FFA726</color>
+    <color name="color_card_8">#4CAF50</color>
+    <color name="color_card_9">#F48FB1</color>
+    <color name="color_card_10">#D4E157</color>
+    <color name="main_color">#FFCA28</color>
+    <color name="box_color_1">#7E57C2</color>
+    <color name="box_color_2">#66BB6A</color>
+    <color name="box_color_3">#8D6E63</color>
+    <color name="box_color_4">#ef5350</color>
 </resources>
