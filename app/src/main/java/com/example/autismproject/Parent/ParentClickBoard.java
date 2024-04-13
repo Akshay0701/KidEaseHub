@@ -19,6 +19,8 @@ import android.widget.Toast;
 
 import com.example.autismproject.Adapters.AdapterCategory;
 import com.example.autismproject.Adapters.AdapterItem;
+import com.example.autismproject.AddNewCategory;
+import com.example.autismproject.AddNewItem;
 import com.example.autismproject.Models.Category;
 import com.example.autismproject.Models.Item;
 import com.example.autismproject.Models.Task;
@@ -78,7 +80,7 @@ public class ParentClickBoard extends AppCompatActivity {
 
         addNewCategory = findViewById(R.id.parent_clickboard_addcategory);
         addNewCategory.setOnClickListener(view -> {
-          // call create new category page
+            startActivity(new Intent(ParentClickBoard.this, AddNewCategory.class));
         });
 
         backBtn = findViewById(R.id.backBtn);
@@ -94,7 +96,7 @@ public class ParentClickBoard extends AppCompatActivity {
                 editor.putString("selectedCategoryID", categoryList.get(0).getcID());
                 editor.apply();
             }
-            // call create new item page
+            startActivity(new Intent(ParentClickBoard.this, AddNewItem.class));
         });
 
         //load category recyclerview
