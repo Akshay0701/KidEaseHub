@@ -19,9 +19,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AutismProject"
         tools:targetApi="31">
-
-
-
+        <activity
+            android:name=".AddNewItem"
+            android:exported="false" />
+        <activity
+            android:name=".AddNewCategory"
+            android:exported="false" />
+        <activity
+            android:name=".Parent.ParentClickBoard"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -32,6 +38,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Child.ChildLogin"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Child.ChildRegister"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Parent.ParentLogin"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Parent.ParentRegister"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Parent.ParentHome"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
     </application>
 
 </manifest>
