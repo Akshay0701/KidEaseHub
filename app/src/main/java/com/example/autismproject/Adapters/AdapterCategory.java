@@ -20,12 +20,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.autismproject.AddNewItem;
 import com.example.autismproject.Models.Category;
 import com.example.autismproject.Models.Item;
-import com.example.autismproject.Models.Video;
-import com.example.autismproject.Parent.AddNewItem;
 import com.example.autismproject.R;
-import com.example.autismproject.VideoPlayer;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
