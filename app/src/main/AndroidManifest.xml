@@ -20,6 +20,9 @@
         android:theme="@style/Theme.AutismProject"
         tools:targetApi="31">
         <activity
+            android:name=".Child.ChildClickBoard"
+            android:exported="false" />
+        <activity
             android:name=".AddNewItem"
             android:exported="false" />
         <activity
