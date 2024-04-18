@@ -19,7 +19,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.example.autismproject.Adapters.AdapterTasks;
 import com.example.autismproject.Adapters.AdapterVideos;
 import com.example.autismproject.Models.Task;
 import com.example.autismproject.Models.Video;

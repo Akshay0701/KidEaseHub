@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.autismproject.Games.GameMainAcitivty;
 import com.example.autismproject.R;
 
 public class ChildHome extends AppCompatActivity {
@@ -22,7 +21,7 @@ public class ChildHome extends AppCompatActivity {
         setContentView(R.layout.activity_child_home);
 
         mCQCardView = findViewById(R.id.card_MCQ);
-        mCQCardView.setOnClickListener(view -> startActivity(new Intent(ChildHome.this, mcqtest.class)));
+        // todo make a mcq test
 
         clickBoardCarView = findViewById(R.id.card_clickboard);
         clickBoardCarView.setOnClickListener(view -> {
@@ -31,12 +30,12 @@ public class ChildHome extends AppCompatActivity {
 
         gamesCardView = findViewById(R.id.card_gaming);
         gamesCardView.setOnClickListener(view -> {
-            startActivity(new Intent(ChildHome.this, GameMainAcitivty.class));
+            // todo make a game view
         });
 
         todoListCardView = findViewById(R.id.card_todolist);
         todoListCardView.setOnClickListener(view -> {
-            startActivity(new Intent(ChildHome.this, ChildTodoList.class));
+            // todo make a child todo
         });
 
         videosCardView = findViewById(R.id.card_youtubeVideos);

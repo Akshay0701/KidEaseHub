@@ -27,7 +27,6 @@ import com.bumptech.glide.Glide;
 import com.example.autismproject.Models.Child;
 import com.example.autismproject.Models.Task;
 import com.example.autismproject.Models.Video;
-import com.example.autismproject.Parent.ChildProfile;
 import com.example.autismproject.R;
 import com.example.autismproject.VideoPlayer;
 import com.google.firebase.database.DataSnapshot;
