@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import com.example.autismproject.R;
 
+// no need for child register
 public class ChildRegister extends AppCompatActivity {
 
     @Override
