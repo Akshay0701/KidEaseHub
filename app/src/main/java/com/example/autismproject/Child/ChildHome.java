@@ -3,10 +3,12 @@ package com.example.autismproject.Child;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.app.GameManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.autismproject.Games.GameMainAcitivty;
 import com.example.autismproject.R;
 
 public class ChildHome extends AppCompatActivity {
@@ -30,7 +32,7 @@ public class ChildHome extends AppCompatActivity {
 
         gamesCardView = findViewById(R.id.card_gaming);
         gamesCardView.setOnClickListener(view -> {
-            // todo make a game view
+            startActivity(new Intent(ChildHome.this, GameMainAcitivty.class));
         });
 
         todoListCardView = findViewById(R.id.card_todolist);
