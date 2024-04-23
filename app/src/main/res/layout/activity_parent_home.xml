@@ -52,7 +52,6 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:fontFamily="@font/montserrat"
                 android:gravity="center"
                 android:text="Parent Home"
                 android:textColor="#FFFFFF"
@@ -68,7 +67,6 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/button_states"
-            android:fontFamily="@font/montserrat"
             android:text="Clickboard"
             android:textColor="@color/colorAccent"
             android:textSize="20dp"
@@ -82,9 +80,9 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/button_states2"
-            android:fontFamily="@font/montserrat"
             android:text="Add Child"
             android:textSize="20dp"
+            android:layout_marginBottom="20dp"
             android:textStyle="bold"></Button>
 
         <androidx.recyclerview.widget.RecyclerView

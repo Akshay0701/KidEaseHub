@@ -13,6 +13,8 @@ import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -21,10 +23,18 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.autismproject.Parent.ParentClickBoard;
 import com.example.autismproject.Parent.ParentRegister;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
+import java.io.ByteArrayOutputStream;
+import java.util.HashMap;
+import java.util.Map;
 
 public class AddNewCategory extends AppCompatActivity {
 
@@ -103,7 +113,61 @@ public class AddNewCategory extends AppCompatActivity {
     }
 
     private void startAddingCategory(String name) {
-        // Todo need to look into Firebase storage methods
+        pd.setMessage("publishing post...");
+        pd.show();
+        String filePathName="Posts/"+"post_"+ String.valueOf(System.currentTimeMillis());
+
+
+        Bitmap bitmap=((BitmapDrawable)imageIv.getDrawable()).getBitmap();
+
+        ByteArrayOutputStream bout=new ByteArrayOutputStream();
+        //image compress
+        bitmap.compress(Bitmap.CompressFormat.PNG,100,bout);
+        byte[] data=bout.toByteArray();
+
+        StorageReference ref= FirebaseStorage.getInstance().getReference().child(filePathName);
+
+
+        ref.putBytes(data).addOnSuccessListener(taskSnapshot -> {
+
+            Task<Uri> uriTask=taskSnapshot.getStorage().getDownloadUrl();
+            // wait till task is uri is complete
+            while(!uriTask.isSuccessful());
+
+            String downloadUri=uriTask.getResult().toString();
+
+            if(uriTask.isSuccessful()){
+                //uri is received upload post to firebase database
+                DatabaseReference ref1 =FirebaseDatabase.getInstance().getReference("Categories");
+
+                String cId= ref1.push().getKey();
+                Map<String, Object> hashMap = new HashMap<>();
+                //put info
+                hashMap.put("name", name);
+                hashMap.put("imgUrl", downloadUri);
+                hashMap.put("cID",cId);
+                hashMap.put("pID", mUid);
+
+                assert cId != null;
+                ref1.child(cId).updateChildren(hashMap).addOnSuccessListener(aVoid -> {
+                    pd.dismiss();
+                    Toast.makeText(AddNewCategory.this, "Category Uploaded", Toast.LENGTH_SHORT).show();
+
+                    //reset view
+                    imageIv.setImageURI(null);
+                    image_rui=null;
+
+                    startActivity(new Intent(AddNewCategory.this, ParentClickBoard.class));
+                    finish();
+                }).addOnFailureListener(e -> {
+                    Toast.makeText(AddNewCategory.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
+                    pd.dismiss();
+                });
+
+            }
+
+        }).addOnFailureListener(e -> Toast.makeText(AddNewCategory.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show());
+
     }
 
 

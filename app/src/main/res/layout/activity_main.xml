@@ -21,7 +21,6 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:fontFamily="@font/montserrat"
             android:textColor="#305F72"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="7dp"
@@ -51,7 +50,6 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/button_states"
-                android:fontFamily="@font/montserrat"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:text="Parent"
@@ -67,7 +65,6 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button_states2"
-                android:fontFamily="@font/montserrat"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:text="Child"
