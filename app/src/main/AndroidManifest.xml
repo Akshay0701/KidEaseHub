@@ -22,7 +22,13 @@
         android:theme="@style/Theme.AutismProject"
         tools:targetApi="31">
         <activity
-            android:name=".Adapters.Games.GameMainAcitivty"
+            android:name=".Games.GameMainAcitivty"
+            android:exported="false" />
+        <activity
+            android:name=".Games.ShapesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Games.WeekActivity"
             android:exported="false" />
         <activity
             android:name=".Child.ChildClickBoard"
