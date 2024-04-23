@@ -22,6 +22,12 @@
         android:theme="@style/Theme.AutismProject"
         tools:targetApi="31">
         <activity
+            android:name=".Games.ColorsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Games.AlphabetActivity"
+            android:exported="false" />
+        <activity
             android:name=".Games.NumbersActivity"
             android:exported="false" />
         <activity
