@@ -30,6 +30,12 @@
         <activity
             android:name=".Games.NumbersActivity"
             android:exported="false" />
+	<activity
+            android:name=".Games.ShapesActivity"
+            android:exported="false" />
+	<activity
+            android:name=".Games.WeekActivity"
+            android:exported="false" />
         <activity
             android:name=".Adapters.Games.GameMainAcitivty"
             android:exported="false" />
