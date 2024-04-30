@@ -28,9 +28,12 @@ import java.util.HashMap;
 
 public class ParentRegister extends AppCompatActivity {
 
-    EditText parentName, parentEmail, parentPassword, parentPhoneno;
+    public EditText parentName;
+    public EditText parentEmail;
+    public EditText parentPassword;
+    public EditText parentPhoneno;
 
-    private FirebaseAuth mAuth;
+    public FirebaseAuth mAuth;
 
     Button gotoLogin,registerBtn;
     ImageView backBtn;

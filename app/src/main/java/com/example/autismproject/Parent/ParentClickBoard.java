@@ -47,7 +47,7 @@ public class ParentClickBoard extends AppCompatActivity {
     List<Category> categoryList;
     AdapterCategory adapterCategory;
 
-    SharedPreferences pref;
+    public SharedPreferences pref;
     SharedPreferences.OnSharedPreferenceChangeListener listener;
 
     // for items underneath the categories
@@ -59,12 +59,12 @@ public class ParentClickBoard extends AppCompatActivity {
     // child id for retrieving all tasks
     String cID;
 
-    FirebaseDatabase firebaseDatabase;
+    public FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReferenceCategory;
     DatabaseReference databaseReferenceItem;
 
     String mUid,mEmail;
-    private FirebaseAuth mAuth;
+    public FirebaseAuth mAuth;
     ImageView backBtn;
 
     @Override
@@ -123,7 +123,7 @@ public class ParentClickBoard extends AppCompatActivity {
         pref.registerOnSharedPreferenceChangeListener(listener);
     }
 
-    void loadCategory() {
+    public void loadCategory() {
         databaseReferenceCategory.addValueEventListener(new ValueEventListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override

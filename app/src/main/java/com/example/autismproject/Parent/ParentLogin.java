@@ -22,6 +22,9 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class ParentLogin extends AppCompatActivity {
 
+    public void setFirebaseAuth(FirebaseAuth firebaseAuth) {
+        this.mAuth = firebaseAuth;
+    }
 
     EditText parentEmail, parentPassword;
 
