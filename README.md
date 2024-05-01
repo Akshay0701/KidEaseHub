@@ -1,1 +1,1 @@
-# KidEaseHu
+# KidEaseHub
