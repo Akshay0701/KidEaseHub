@@ -46,7 +46,7 @@ public class ChildLogin extends AppCompatActivity {
 
     EditText parentEmail, parentPassword;
 
-    private FirebaseAuth mAuth;
+    public FirebaseAuth mAuth;
 
     Button gotoRegister, loginBtn;
 
@@ -55,8 +55,8 @@ public class ChildLogin extends AppCompatActivity {
     List<Child> childList;
     AdapterChilds adapterChilds;
 
-    FirebaseDatabase firebaseDatabase;
-    DatabaseReference databaseReference;
+    public FirebaseDatabase firebaseDatabase;
+    public DatabaseReference databaseReference;
 
     LinearLayout parentLinear, childSelectionLinear;
     ImageView backBtn;
@@ -152,7 +152,7 @@ public class ChildLogin extends AppCompatActivity {
         }
     }
 
-    private void loginParent(String email, String password) {
+    public void loginParent(String email, String password) {
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
             // make email password invisible and child selection as visible
             parentLinear.setVisibility(View.GONE);
