@@ -1,5 +1,12 @@
 package com.example.autismproject.Child;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
@@ -10,13 +17,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.autismproject.Adapters.AdapterCategory;
 import com.example.autismproject.Adapters.AdapterItem;
@@ -40,24 +40,18 @@ public class ChildClickBoard extends AppCompatActivity {
 
 
     // Selected Items
-    ImageView selectedItemImage1;
-    ImageView selectedItemImage2;
-    ImageView selectedItemImage3;
-    public ImageView playIcon;
-    ImageView deleteIcon;
-    public TextView selectedItemText1;
-    public TextView selectedItemText2;
-    public TextView selectedItemText3;
+    ImageView selectedItemImage1, selectedItemImage2, selectedItemImage3, playIcon, deleteIcon;
+    TextView selectedItemText1, selectedItemText2, selectedItemText3;
     ImageView backBtn;
 
     // for category
     RecyclerView categoryRecyclerView;
     RecyclerView.LayoutManager  categorylayoutManager;
     List<Category> categoryList;
-    public AdapterCategory adapterCategory;
+    AdapterCategory adapterCategory;
 
-    public SharedPreferences pref;
-    public SharedPreferences.OnSharedPreferenceChangeListener listener;
+    SharedPreferences pref;
+    SharedPreferences.OnSharedPreferenceChangeListener listener;
 
     // for items underneath the categories
     RecyclerView itemRecyclerView;
@@ -68,14 +62,14 @@ public class ChildClickBoard extends AppCompatActivity {
     // child id for retrieving all tasks
     String cID;
 
-    public FirebaseDatabase firebaseDatabase;
+    FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReferenceCategory;
     DatabaseReference databaseReferenceItem;
 
     String mUid,mEmail;
-    public FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
 
-    public TextToSpeech textToSpeech;
+    TextToSpeech textToSpeech;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -195,7 +189,7 @@ public class ChildClickBoard extends AppCompatActivity {
     }
 
 
-    public void loadCategory() {
+    void loadCategory() {
         databaseReferenceCategory.addValueEventListener(new ValueEventListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
@@ -284,7 +278,7 @@ public class ChildClickBoard extends AppCompatActivity {
         }
     }
 
-    public void clearSelectedItems() {
+    void clearSelectedItems() {
         selectedItemText1.setText("");
         selectedItemText2.setText("");
         selectedItemText3.setText("");
