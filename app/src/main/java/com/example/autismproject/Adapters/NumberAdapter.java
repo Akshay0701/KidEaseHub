@@ -108,7 +108,6 @@ public class NumberAdapter extends RecyclerView.Adapter<NumberAdapter.ColorViewH
                 recyclerViewAction.onViewClicked(v.getId(), holder.getAdapterPosition());
             }
         });
-
     }
 
     @Override
