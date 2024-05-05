@@ -37,9 +37,6 @@
             android:name=".Games.WeekActivity"
             android:exported="false" />
         <activity
-            android:name=".Adapters.Games.GameMainAcitivty"
-            android:exported="false" />
-        <activity
             android:name=".Child.ChildClickBoard"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
